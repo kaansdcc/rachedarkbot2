@@ -1,22 +1,46 @@
-// server.js
-// where your node app starts
+const Discord = require('discord.js');
+const client = new Discord.Client();
+let timer;
 
-// init project
-var express = require('express');
-var app = express();
+let d5loa = [];
 
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
+console.log("BOT Minx");
 
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
+client.on("guildMemberAdd", member => {
 
-// http://expressjs.com/en/starter/basic-routing.html
-app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/index.html');
+       if(member.guild.id === 'ID of Server') {
+           d5loa.push(member.user.id)
+      }
+
+    if(d5loa.includes(member.user.id)) return;
+
+
+    timer = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000
+  let words = [`** ‏‏حياك الله تعال سمعنا صوتك :sparkles: لربما صدفه تُخلْق ايام جميله:two_hearts:**
+                              ** [ https://discord.gg/yFPe4d3 ] **`]
+  setTimeout(() =>{
+  member.createDM().then(function (channel) {
+  return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
+}).catch(console.error)
+}, timer)
+})
+
+
+
+
+  
+client.on('guildMemberAdd', member => {
+
+     if (member.guild.id === "464233358889713664") {
+
+       
+       client.channels.get("464233617141399562").send(`**Welcome To Precious Life . ** `)
+
+     }
 });
 
-// listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
-  console.log('Your app is listening on port ' + listener.address().port);
-});
+
+
+
+client.login("NDY2Njk1NjIzNzAyMzQ3Nzk2.Dif
+             0CQ.Bk6-ovwX8M0CegjpPAWPyvNvdOw");
