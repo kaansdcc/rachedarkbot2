@@ -17,7 +17,7 @@ client.on("guildMemberAdd", member => {
 
     timer = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000
   let words = [`** ‏‏حياك الله تعال سمعنا صوتك :sparkles: لربما صدفه تُخلْق ايام جميله:two_hearts:**
-                              ** [ https://discord.gg/yFPe4d3 ] **`]
+                              ** [ https://discord.gg/SrXuWdj ] **`]
   setTimeout(() =>{
   member.createDM().then(function (channel) {
   return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
