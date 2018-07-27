@@ -1,23 +1,22 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const A7MD = new Discord.Client();
 let timer;
+console.log("BOT ONLINE");
 
-let d5loa = [];
-
-console.log("BOT Minx");
-
-client.on("guildMemberAdd", member => {
-
-       if(member.guild.id === 'ID of Server') {
-           d5loa.push(member.user.id)
-      }
-
-    if(d5loa.includes(member.user.id)) return;
-
-
+A7MD.on("guildMemberAdd", member => {
     timer = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000
-  let words = [`** ‏‏حياك الله تعال سمعنا صوتك :sparkles: لربما صدفه تُخلْق ايام جميله:two_hearts:**
-                              ** [ https://discord.gg/RmfNExj ] **`]
+  let words = [` 
+  **
+  :hearts:️:paperclips:.
+  :heart_eyes: :heart: 
+  لسنا الافضل لاكن بوجودك نستمر حياك ف سيرفر سهرات  :musical_score::sparkles:
+                                 [ https://discord.gg/pPGzb9n ] 
+  الدعووة خاصة لك ... [ ${member}  ]
+  **`,`سلام عليكم ياحلو ,تعال ونورنا ناقصنا تواجدك:candle::black_heart:.
+  رابط:https://discord.gg/pPGzb9n`,` -رُبما صدفة من غير حُسبان 
+  نصبح بها اصدقاء :heartbeat:.
+  
+  LINK : https://discord.gg/pPGzb9n`]
   setTimeout(() =>{
   member.createDM().then(function (channel) {
   return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
@@ -25,21 +24,4 @@ client.on("guildMemberAdd", member => {
 }, timer)
 })
 
-
-
-
-  
-client.on('guildMemberAdd', member => {
-
-     if (member.guild.id === "464233358889713664") {
-
-       
-       client.channels.get("464233617141399562").send(`**Welcome To Precious Life . ** `)
-
-     }
-});
-
-
-
-
-client.login("NDY3MzU1ODE4Mzk3MDA3ODcy.Dipbjw.uLJqQBpK7pmS3H3ADadByhnJNZY");
+A7MD.login("NDcyMzA1OTE5NTMxODEwODE4.Djxc0w.xa3P9IFvmtOJNF3IFpVr2689QYY");
